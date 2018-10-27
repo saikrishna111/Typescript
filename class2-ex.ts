@@ -21,6 +21,7 @@ class Student extends Person{
 						Student Age:${this.age},
 						Student sid:${this.sid},
 						Student Course:${this.course}`;
+			//console.log(str);
 			console.log(str);
 		}
 }
