@@ -1,0 +1,54 @@
+<html>
+	<head></head>
+		<body>
+			<!-- <input type="button" onclick="f1()" value="Get Data"> -->
+				<br><br>
+			<table id="table1" border="0" width="550">
+			</table>
+		</body>
+		
+		<script>
+		var ar2 = ["lightblue", "green", "blue", "red", "orange"];
+		var obj1 = document.getElementById("table1");
+					var depts = [
+						{sno:1, Name:"krishna", Branch:"Accounts", Location:"Hyderabad"},
+						{sno:2, Name:"sai", Branch:"Commerce", Location:"Vijayawada"},
+						{sno:3, Name:"Raju", Branch:"Economics", Location:"Secunderabad"},
+						{sno:4, Name:"Shiva", Branch:"Business Law", Location:"Warasiguda"},
+						{sno:5, Name:"Sudheer", Branch:"CA", Location:"Medak"},					
+						{sno:5, Name:"Sudheer", Branch:"CA", Location:"Medak"},					
+					];
+			
+			
+				var str = "<tr style='height:40px;'> <th width='20%'>SNo</th> <th>Name</th> <th>Branch</th><th>Location</th></tr>";
+					
+						for(var i=0; i<depts.length; i++){
+						
+							str = str + "<tr style='height:40px; text-align:center;'>";
+							str = str + "<td>" + depts[i].sno + "</td>";
+							str = str + "<td>" + depts[i].Name + "</td>";
+							str = str + "<td>" + depts[i].Branch + "</td>";
+							str = str + "<td>" + depts[i].Location + "</td>";
+							str = str + "<tr>";	
+							n++;							
+						}
+				obj1.innerHTML=str;
+				
+				var n=0;
+				   var rows = document.getElementsByTagName("tr");
+					<!-- console.log(rows); -->
+					for(i = 0; i < rows.length; i++){           
+				  //manipulate rows 
+					  
+						rows[i].style.backgroundColor = ar2[n]; 
+						rows[i].style.color = 'white'; 
+						<!-- rows[i].style.height = '40px';  -->
+						n++;
+						if(n>= ar2.length)n=0;
+					}
+				
+				
+			
+		</script>
+		
+</html>
